@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ChaosMath.iml" filepath="$PROJECT_DIR$/ChaosMath.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/ChaosMath-app.iml" filepath="$PROJECT_DIR$/app/ChaosMath-app.iml" group="ChaosMath/app" />
+      <module fileurl="file://$PROJECT_DIR$/LeetCode-ChaosMath.iml" filepath="$PROJECT_DIR$/LeetCode-ChaosMath.iml" group="ChaosMath" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
