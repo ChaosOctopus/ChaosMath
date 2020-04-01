@@ -4,8 +4,12 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by zhaoyuanchao on 2019-11-29.
@@ -50,5 +54,33 @@ public class LongestSubstring {
         }
 
         return maxLength;
+    }
+
+    public int LengthOfLongestSubString(String s){
+        Set<Character> set  = new HashSet<>();
+        int max = -1;
+        for (int i = 0,j = 0; j < s.length(); j++) {
+            while (set.contains(s.charAt(i))){
+                set.remove(s.charAt(i));
+                i++;
+            }
+
+            set.add(s.charAt(j));
+            max = Math.max(max,set.size());
+        }
+        return max;
+    }
+
+    public int LengthOfLongestStringUpdate(String s){
+        Map<Character,Integer> map = new HashMap<>();
+        int max = 0;
+        for (int i= 0,j = 0; j < s.length() ; j++){
+            while (map.containsKey(s.charAt(j))){
+                i = Math.max(i,map.get(s.charAt(j)+1));
+            }
+            map.put(s.charAt(j),j);
+            max = Math.max(max,j-i+1);
+        }
+        return max;
     }
 }
