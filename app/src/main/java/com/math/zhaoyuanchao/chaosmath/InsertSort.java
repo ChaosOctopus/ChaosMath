@@ -10,7 +10,7 @@ public class InsertSort {
             for (j = i-1;j>= 0 && nums[j] > current;j--){
                 nums[j+1] = nums[j];
             }
-
+//sajd
             nums[j+1] = current;
         }
     }
